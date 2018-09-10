@@ -1,0 +1,110 @@
+.wjs_news {
+    padding-top: 20px;
+    text-align: center;
+    .news_l {
+      width: 100%;
+      padding-top: 20px;
+      position: relative;
+      border-bottom: 1px solid #ccc;
+      > h4 {
+        font-size: 25px;
+        color: #000;
+        text-align: center;
+      }
+      &::after {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        content: "";
+        border-radius: 50%;
+        bottom: -5px;
+        right: -10px;
+        border: 1px solid #ccc;
+      }
+    }
+    .nav-tabs {
+       padding-left: 10px;
+       > li {
+         > a {
+           display: block;
+           width: 60px;
+           height: 60px;
+           border-radius: 50%;
+           margin-bottom: 70px;
+           background-color: #ccc;
+           > span {
+             font-size: 30px;
+             color: #fff;
+           }
+         }
+         &.active{
+           > a {
+             background-color: #e92312;
+             border: none;
+             &:hover {
+               border: none;
+             }
+           }
+         }
+       }
+    }
+    .row {
+       > div:nth-of-type(2){
+         position: relative;
+         > .dashLine {
+            position: absolute;
+            width: 1px;
+            height: 420px;
+            z-index: -1;
+            top: 0;
+            left: 55px;
+            border: 0.5px dashed #e92312;
+         }
+       }
+    }
+    #home1 {
+      padding: 20px 0 0 10px;
+      > a {
+        display: block;
+        margin-bottom: 45px;
+        color: #846e6e;
+        font-size: 14px;
+        text-align: -webkit-left;
+      }
+    }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .wjs_news {
+    .nav-tabs {
+      li {
+        margin: 30px 60px -30px 0;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .wjs_news {
+    .nav-tabs {
+      li {
+        width: 25%;
+        margin: 30px 0 -30px 0;
+      }
+    }
+  }
+}
+.wjs_paretner {
+  padding-top: 30px;
+  background-color: #eee;
+  text-align: center;
+  h2 {
+    color: #000000;
+    font-size: 25px;
+  }
+  .aBox {
+    > a {
+      font-size: 80px;
+      color: #585252;
+      padding: 0 10px;
+    }
+  }
+}

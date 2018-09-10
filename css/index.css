@@ -1,0 +1,585 @@
+/*common CSS 通用样式*/
+body {
+    font-size: 14px;
+    font-family: "Microsoft Yahei", sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+a:hover {
+    color: #666;
+    text-decoration: none;
+}
+/*定义字体图标*/
+@font-face {
+    font-family: wjs_font_icon;
+    src:
+    url(../fonts/MiFie-Web-Font.eot) format('embedded-opentype'),
+    url(../fonts/MiFie-Web-Font.svg) format('svg'),
+    url(../fonts/MiFie-Web-Font.ttf) format('truetype'),
+    url(../fonts/MiFie-Web-Font.woff) format('woff');
+}
+/*定义使用字体的类*/
+.wjs_icon {
+    font-family: wjs_font_icon;
+}
+/*具体到图标的类*/
+.wjs_icon_phone::before {
+    content: "\e908";
+}
+.wjs_icon_call::before {
+    content: "\e909";
+}
+.wjs_icon_logo::before {
+    content: "\e920";
+}
+.wjs_icon_text::before {
+    content: "\e93e";
+}
+.wjs_icon_money::before {
+    content: "\e900";
+}
+.wjs_icon_clock::before {
+    content: "\e906";
+}
+.wjs_icon_photography::before {
+    content: "\e905";
+}
+.wjs_icon_pLeft::before {
+    content: "\e915";
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    color: #fff;
+    font-size: 30px;
+}
+.wjs_icon_new01::before {
+    content: "\e90e";
+}
+.wjs_icon_new02::before {
+    content: "\e90f";
+}
+.wjs_icon_new03::before {
+    content: "\e910";
+}
+.wjs_icon_new04::before {
+    content: "\e911";
+}
+.wjs_icon_partner01::before {
+    content: "\e946";
+}
+.wjs_icon_partner02::before {
+    content: "\e92f";
+}
+.wjs_icon_partner03::before {
+    content: "\e92e";
+}
+.wjs_icon_partner04::before {
+    content: "\e92a";
+}
+.wjs_icon_partner05::before {
+    content: "\e929";
+}
+.wjs_icon_partner06::before {
+    content: "\e931";
+}
+.wjs_icon_partner07::before {
+    content: "\e92c";
+}
+.wjs_icon_partner08::before {
+    content: "\e92b";
+}
+.wjs_icon_partner09::before {
+    content: "\e92d";
+}
+/*自定义添加类*/
+.padding_left {
+    padding-left: 10px;
+}
+.padding_right {
+    padding-right: 10px;
+}
+.border_right {
+    border-right: 1px solid #ccc;
+}
+.margin_top {
+    margin-top: 25px;
+}
+.logo {
+    font-size: 40px;
+    color: red;
+}
+.text {
+    font-size: 40px;
+    color: #000;
+}
+.line {
+    border-bottom: 3px solid #e92322;
+}
+.PC_Img {
+    display: block;
+    width: 100%;
+    height: 410px;
+    /*background: url("../images/slide_01_2000x410.jpg") no-repeat center center;*/
+    background-size: cover;
+    /*background-position: center;*/
+}
+.m_Img {
+    display: block;
+    width: 100%;
+}
+.m_Img img {
+    display: block;
+    width: 100%;
+}
+.float_left {
+    float: left;
+}
+.float_right {
+    float: right;
+}
+.wjs_book .row .a_color {
+    color: #333;
+    border-bottom: none;
+}
+.tab-content .container .tab_col .backgroundColor {
+    background-color: #e92322;
+}
+.word_color_write {
+    color: #fff;
+}
+.word_color_black {
+    color: #353535;
+}
+.word_color_wjsRed {
+    color: #e92322;
+}
+.font_size {
+    font-size: 12px;
+}
+.text_align {
+    text-align: right;
+}
+/*moudle CSS 模块样式*/
+/*顶部栏*/
+.wjs_topBar {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+.wjs_topBar .wjs_topBox {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.wjs_topBar .wjs_topBox .app {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+.wjs_topBar .wjs_topBox .app > img {
+    display: none;
+}
+.wjs_topBar .wjs_topBox .app:hover img {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*nav栏,更改nav样式*/
+.wjs_navBar {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    margin-bottom: -1px;
+}
+.wjs_navBar .navbar-brand {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+.wjs_navBar .navbar-brand:hover,
+.wjs_navBar .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.wjs_navBar .navbar-text {
+    color: #777;
+}
+.wjs_navBar .navbar-nav > li > a {
+    color: #777;
+    font-size: 16px;
+    height: 80px;
+    line-height: 50px;
+}
+.wjs_navBar .navbar-nav > li > a:hover,
+.wjs_navBar .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 3px solid #e92322;
+}
+.wjs_navBar .navbar-nav > .active > a,
+.wjs_navBar .navbar-nav > .active > a:hover,
+.wjs_navBar .navbar-nav > .active > a:focus {
+    color: #555;
+    /*background-color: #e7e7e7;*/
+}
+.wjs_navBar .navbar-nav > .disabled > a,
+.wjs_navBar .navbar-nav > .disabled > a:hover,
+.wjs_navBar .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.wjs_navBar .navbar-toggle {
+    border-color: #ddd;
+}
+.wjs_navBar .navbar-toggle:hover,
+.wjs_navBar .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.wjs_navBar .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.wjs_navBar .navbar-collapse,
+.wjs_navBar .navbar-form {
+    border-color: #e7e7e7;
+}
+.wjs_navBar .navbar-nav > .open > a,
+.wjs_navBar .navbar-nav > .open > a:hover,
+.wjs_navBar .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+    .wjs_navBar .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .wjs_navBar .navbar-nav .open .dropdown-menu > li > a:hover,
+    .wjs_navBar .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .wjs_navBar .navbar-nav .open .dropdown-menu > .active > a,
+    .wjs_navBar .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .wjs_navBar .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .wjs_navBar .navbar-nav .open .dropdown-menu > .disabled > a,
+    .wjs_navBar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .wjs_navBar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.wjs_navBar .navbar-link {
+    color: #777;
+}
+.wjs_navBar .navbar-link:hover {
+    color: #333;
+}
+.wjs_navBar .btn-link {
+    color: #777;
+}
+.wjs_navBar .btn-link:hover,
+.wjs_navBar .btn-link:focus {
+    color: #333;
+}
+.wjs_navBar .btn-link[disabled]:hover,
+fieldset[disabled] .wjs_navBar .btn-link:hover,
+.wjs_navBar .btn-link[disabled]:focus,
+fieldset[disabled] .wjs_navBar .btn-link:focus {
+    color: #ccc;
+}
+
+/*轮播图*/
+/*.carousel-inner .item:nth-child(2) a {*/
+    /*background: url("../images/slide_02_2000x410.jpg") no-repeat center;*/
+/*}*/
+/*.carousel-inner .item:nth-child(3) a {*/
+    /*background: url("../images/slide_03_2000x410.jpg") no-repeat center;*/
+/*}*/
+/*.carousel-inner .item:nth-child(4) a {*/
+    /*background: url("../images/slide_04_2000x410.jpg") no-repeat center;*/
+/*}*/
+
+/*info新闻*/
+.wjs_info {
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+}
+@media (min-width: 768px) {
+    .wjs_info .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .wjs_info .container {
+        width: 970px;
+    }
+}
+.wjs_info a {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+}
+.wjs_info a span {
+    display: block;
+    font-size: 40px;
+    padding-top: 5px;
+}
+.wjs_info .hp {
+    color: #333;
+    padding-left: 10px;
+}
+.wjs_info .hp h4 {
+    font-size: 18px;
+}
+.wjs_info .hp p {
+    font-size: 14px;
+}
+/*book预约*/
+.wjs_book {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 15px;
+    color: #333;
+}
+.wjs_book a:first-of-type {
+    color: #333;
+}
+.wjs_book a:first-of-type:hover {
+    color: #e92322;
+}
+.wjs_book a:last-of-type {
+    color: #e92322;
+    border-bottom: 1px dashed #e92322;
+}
+/*product产品*/
+.wjs_product {
+    padding: 20px 0;
+    background-color: #f5f5f5;
+}
+/*样式设置*/
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav > li {
+    position: relative;
+    display: block;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+.nav > li.disabled > a {
+    color: #777;
+}
+.nav > li.disabled > a:hover,
+.nav > li.disabled > a:focus {
+    color: #777;
+    text-decoration: none;
+    cursor: not-allowed;
+    background-color: transparent;
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+    background-color: #eee;
+    border-color: #337ab7;
+}
+.nav .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+.nav > li > a > img {
+    max-width: none;
+}
+.wjs_product .tabBox {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.wjs_product .nav-tabs {
+    /*border-bottom: 1px solid #ddd;*/
+}
+.wjs_product .nav-tabs > li {
+    float: left;
+    margin-bottom: 0px;
+    margin-right: 20px;
+}
+.wjs_product .nav-tabs > li:first-of-type {
+    border-bottom: 3px solid #e92322;
+}
+.wjs_product .nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: none;
+    color: #000;
+}
+.wjs_product .nav-tabs > li > a:hover {
+    border-bottom: 3px solid #e92322;
+    background: #f5f5f5;
+}
+.wjs_product .nav-tabs > li.active > a,
+.wjs_product .nav-tabs > li.active > a:hover,
+.wjs_product .nav-tabs > li.active > a:focus {
+    color: #555;
+    cursor: default;
+    background-color: #f5f5f5;
+    border: none;
+    border-bottom-color: transparent;
+}
+.wjs_product .nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.wjs_product .nav-tabs.nav-justified > li {
+    float: none;
+}
+.wjs_product .nav-tabs.nav-justified > li > a {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.wjs_product .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .wjs_product .nav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .wjs_product .nav-tabs.nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.wjs_product .nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.wjs_product .nav-tabs.nav-justified > .active > a,
+.wjs_product .nav-tabs.nav-justified > .active > a:hover,
+.wjs_product .nav-tabs.nav-justified > .active > a:focus {
+    border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+    .wjs_product .nav-tabs.nav-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .wjs_product .nav-tabs.nav-justified > .active > a,
+    .wjs_product .nav-tabs.nav-justified > .active > a:hover,
+    .wjs_product .nav-tabs.nav-justified > .active > a:focus {
+        border-bottom-color: #fff;
+    }
+}
+.tab-content > .tab-pane {
+    display: none;
+}
+.tab-content > .active {
+    display: block;
+}
+.wjs_product .nav-tabs .dropdown-menu {
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.tab-content .tab_col {
+    /*padding: 10px 0;*/
+}
+.tab-content .tab_col > div {
+    height: 150px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+.tab-content .tab_col .productBox {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #353535;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.tab_col .productBox .box_left {
+    height: 100%;
+    margin-right: 100px;
+    padding: 0 5px;
+}
+.tab_col .productBox .box_left h4 {
+    font-size: 17px;
+    text-align: center;
+    padding-top: 10px;
+}
+.tab_col .productBox .box_right {
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    border-left: 1px dashed #cec6c6;
+}
+.tab_col .productBox .box_right p {
+    font-size: 45px;
+    padding-top: 23px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+.tab_col .productBox .box_right p sub {
+    font-size: 12px;
+    padding-left: 2px;
+}
+.tab_col .productBox .box_right span {
+    font-size: 15px;
+}
+.tab_col .productBox .box_right::before,
+.tab_col .productBox .box_right::after {
+    /*必须要写content*/
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -8px;
+    border-radius: 50%;
+    background: #f5f5f5;
+}
+.tab_col .productBox .box_right::before {
+    top: -8px;
+    box-shadow: inset 0px -4px 3px #d8d8d8;
+}
+.tab_col .productBox .box_right::after {
+    bottom: -8px;
+    box-shadow: inset 0px 4px 3px #d8d8d8;
+}
+.tab_col .productBox .box_right .word_bao,
+.tab_col .productBox .box_right .word_bei {
+    position: absolute;
+    display: block;
+    top: 10px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+.tab_col .productBox .box_right .word_bao {
+    left: 25px;
+    color: red;
+    border: 1px solid red;
+}
+.tab_col .productBox .box_right .word_bei {
+    right: 25px;
+    color: blue;
+    border: 1px solid blue;
+}
