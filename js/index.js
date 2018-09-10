@@ -1,15 +1,19 @@
 /**
  * Created by lenovo on 2018/9/4.
  */
-console.log("webstrom³åÍ»ÑéÖ¤");
+
+console.log("webstromå†²çªéªŒè¯");
+
+console.log("sublimeå†²çªéªŒè¯");
+
 
 $(function(){
-    //¸Ä±äÂÖ²¥¶¨Ê±Æ÷ËÙ¶È
+    //æ”¹å˜è½®æ’­å®šæ—¶å™¨é€Ÿåº¦
     //$('.carousel').carousel({
     //    interval: 2000
     //});
 
-    //µ÷ÓÃÂÖ²¥
+    //è°ƒç”¨è½®æ’­
     banner();
 
     initProduct();
@@ -17,29 +21,29 @@ $(function(){
 
 function banner(){
     /*
-    *  ²½Öè:
-    *  1. Ä£ÄâÊı¾İ(´ÓºóÌ¨»ñÈ¡Êı¾İ)
-    *  2. ÅĞ¶Ïµ±Ç°Éè±¸(Ğ¡ÓÚ768px)
-    *  3. ¸ù¾İµ±Ç°Éè±¸°ÑÊı¾İ×ª»»³Éhtml(×Ö·û´®Æ´½Ó)
-    *  3.1 µãÈİÆ÷µÄ¶¯Ì¬Éú³É
-    *  3.2 Í¼Æ¬ÈİÆ÷µÄ¶¯Ì¬Éú³É
-    *  4. äÖÈ¾µ½Ò³ÃæÖĞ(×·¼Óµ½htmlÖĞ)
-    *  5. ²âÊÔÄÜ·ñÏìÓ¦£¬Á½ÖÖÉè±¸ ¼àÌıÒ³Ãæ³ß´ç¸Ä±ääÖÈ¾
-    *  6. ÒÆ¶¯¶ËÊÖÊÆÇĞ»»¹¦ÄÜ(×ó»¬ ÓÒ»¬)
+    *  æ­¥éª¤:
+    *  1. æ¨¡æ‹Ÿæ•°æ®(ä»åå°è·å–æ•°æ®)
+    *  2. åˆ¤æ–­å½“å‰è®¾å¤‡(å°äº768px)
+    *  3. æ ¹æ®å½“å‰è®¾å¤‡æŠŠæ•°æ®è½¬æ¢æˆhtml(å­—ç¬¦ä¸²æ‹¼æ¥)
+    *  3.1 ç‚¹å®¹å™¨çš„åŠ¨æ€ç”Ÿæˆ
+    *  3.2 å›¾ç‰‡å®¹å™¨çš„åŠ¨æ€ç”Ÿæˆ
+    *  4. æ¸²æŸ“åˆ°é¡µé¢ä¸­(è¿½åŠ åˆ°htmlä¸­)
+    *  5. æµ‹è¯•èƒ½å¦å“åº”ï¼Œä¸¤ç§è®¾å¤‡ ç›‘å¬é¡µé¢å°ºå¯¸æ”¹å˜æ¸²æŸ“
+    *  6. ç§»åŠ¨ç«¯æ‰‹åŠ¿åˆ‡æ¢åŠŸèƒ½(å·¦æ»‘ å³æ»‘)
     */
 
-    //»ñÈ¡DomÔªËØ
+    //è·å–Domå…ƒç´ 
     var wjs_banner = $(".wjs_banner");
-    //»ñÈ¡µã
+    //è·å–ç‚¹
     var points = $(".carousel-indicators");
-    //»ñÈ¡Í¼
+    //è·å–å›¾
     var imgs = $(".carousel-inner");
-    //»ñÈ¡window´°¿Ú´óĞ¡
+    //è·å–windowçª—å£å¤§å°
     var windowSize = $(window).width();
-    //¶¨ÒåÊÇ·ñÎªÒÆ¶¯Éè±¸
+    //å®šä¹‰æ˜¯å¦ä¸ºç§»åŠ¨è®¾å¤‡
     var isMobile;
 
-    //1. Ä£ÄâÊı¾İÍ¼Æ¬(´ÓºóÌ¨»ñÈ¡Êı¾İ)
+    //1. æ¨¡æ‹Ÿæ•°æ®å›¾ç‰‡(ä»åå°è·å–æ•°æ®)
     var data = [
         {
           PC_img: "images/slide_01_2000x410.jpg",
@@ -59,50 +63,50 @@ function banner(){
         }
     ];
 
-    //3. ¸ù¾İµ±Ç°Éè±¸°ÑÊı¾İ×ª»»³Éhtml(×Ö·û´®Æ´½Ó)
-    //   äÖÈ¾
+    //3. æ ¹æ®å½“å‰è®¾å¤‡æŠŠæ•°æ®è½¬æ¢æˆhtml(å­—ç¬¦ä¸²æ‹¼æ¥)
+    //   æ¸²æŸ“
          var render = function(){
-             //2. ÅĞ¶Ïµ±Ç°Éè±¸(Ğ¡ÓÚ768px)
+             //2. åˆ¤æ–­å½“å‰è®¾å¤‡(å°äº768px)
              isMobile = windowSize > 768 ? false : true;
-             //   3.1 µãÈİÆ÷µÄ¶¯Ì¬Éú³É
+             //   3.1 ç‚¹å®¹å™¨çš„åŠ¨æ€ç”Ÿæˆ
                   var pointsHTML = '';
-             //   3.2 Í¼Æ¬ÈİÆ÷µÄ¶¯Ì¬Éú³É
+             //   3.2 å›¾ç‰‡å®¹å™¨çš„åŠ¨æ€ç”Ÿæˆ
                   var imgsHTML = '';
-             //       Ñ­»·±éÀúÊı¾İ
+             //       å¾ªç¯éå†æ•°æ®
              $.each(data, function(i, v){
-                 //µãäÖÈ¾ \nÊ¹li¿Õ¸ñ·Ö¿ª¾àÀë
+                 //ç‚¹æ¸²æŸ“ \nä½¿liç©ºæ ¼åˆ†å¼€è·ç¦»
                  pointsHTML += '<li data-target="#carousel-example-generic" data-slide-to="'+ i +'" '+ (i==0 ? 'class="active"' : '') +'></li>\n';
-                 //Í¼äÖÈ¾
+                 //å›¾æ¸²æŸ“
                  imgsHTML += '<div class="item '+ (i==0 ? 'active' : '') +'">';
                  if(isMobile){
-                     //³¬Ğ¡ÆÁÆÁÄ»
+                     //è¶…å°å±å±å¹•
                      imgsHTML += '<a href="javaScript:;" class="m_Img"><img src="'+ v.M_img +'" alt=""/></a>';
                  } else {
-                     //url('+ v.PC_img +')Èç¹ûĞ´³Éurl("'+ v.PC_img +'")ÔòÃ»ÓĞÍ¼Æ¬ÏÔÊ¾
+                     //url('+ v.PC_img +')å¦‚æœå†™æˆurl("'+ v.PC_img +'")åˆ™æ²¡æœ‰å›¾ç‰‡æ˜¾ç¤º
                      imgsHTML += '<a href="javaScript:;" class="PC_Img" style="background: url('+ v.PC_img +') no-repeat center"></a>';
                  }
                  imgsHTML += '</div>';
              });
 
-             //4. äÖÈ¾µ½Ò³ÃæÖĞ(×·¼Óµ½htmlÖĞ)
+             //4. æ¸²æŸ“åˆ°é¡µé¢ä¸­(è¿½åŠ åˆ°htmlä¸­)
              imgs.html(imgsHTML);
              points.html(pointsHTML);
 
-             //»òÕßĞ´³É
+             //æˆ–è€…å†™æˆ
              //imgs.html($('<a href="javaScript:;" class="m_Img"></a>').css("backgroundImage", "url("+ v.M_img +")"));
          };
 
-    //µ÷ÓÃäÖÈ¾
+    //è°ƒç”¨æ¸²æŸ“
     //render();
 
-    //5. ²âÊÔÄÜ·ñÏìÓ¦£¬Á½ÖÖÉè±¸ ¼àÌıÒ³Ãæ³ß´ç¸Ä±ääÖÈ¾
+    //5. æµ‹è¯•èƒ½å¦å“åº”ï¼Œä¸¤ç§è®¾å¤‡ ç›‘å¬é¡µé¢å°ºå¯¸æ”¹å˜æ¸²æŸ“
     $(window).on("resize", function(){
-        //Ã¿´ÎÒ³Ãæ¸Ä±ä´óĞ¡¶¼ÖØĞÂäÖÈ¾ÂÖ²¥Í¼£¬trigger·½·¨±íÊ¾µ÷ÓÃresize()·½·¨Ò»´Î
+        //æ¯æ¬¡é¡µé¢æ”¹å˜å¤§å°éƒ½é‡æ–°æ¸²æŸ“è½®æ’­å›¾ï¼Œtriggeræ–¹æ³•è¡¨ç¤ºè°ƒç”¨resize()æ–¹æ³•ä¸€æ¬¡
         windowSize = $(window).width();
         render();
     }).trigger('resize');
 
-    //6. ÒÆ¶¯¶ËÊÖÊÆÇĞ»»¹¦ÄÜ(×ó»¬ ÓÒ»¬)
+    //6. ç§»åŠ¨ç«¯æ‰‹åŠ¿åˆ‡æ¢åŠŸèƒ½(å·¦æ»‘ å³æ»‘)
     var startX, moveX, distanceX;
     wjs_banner[0].addEventListener('touchstart', function(e){
         startX = e.targetTouches[0].clientX;
@@ -114,43 +118,43 @@ function banner(){
     wjs_banner[0].addEventListener('touchsend', function(e){
         if(Math.abs(distanceX) >= 50){
             if(distanceX > 0){
-                //ÉÏÒ»ÕÅ
+                //ä¸Šä¸€å¼ 
                 wjs_banner.carousel('prev');
             } else {
-                //ÏÂÒ»ÕÅ
+                //ä¸‹ä¸€å¼ 
                 wjs_banner.carousel('next');
             }
         }
 
-        //ÖØÖÃ
+        //é‡ç½®
         startX = 0;
         moveX = 0;
         distanceX = 0;
     });
 }
 
-//ÊµÏÖ²úÆ·Ä£¿éÔÚÒÆ¶¯¶Ë»¬¶¯¹¦ÄÜ
+//å®ç°äº§å“æ¨¡å—åœ¨ç§»åŠ¨ç«¯æ»‘åŠ¨åŠŸèƒ½
 var initProduct = function(){
-    //1. °ÑËùÓĞµÄÒ³Ç©ÔÚÒ»ĞĞÏÔÊ¾£¬¸¸ÔªËØµÄ¿í¶ÈÎªËùÓĞ×ÓÔªËØ¿í¶ÈÖ®ºÍ
-         // »ñÈ¡DOMÔªËØ
+    //1. æŠŠæ‰€æœ‰çš„é¡µç­¾åœ¨ä¸€è¡Œæ˜¾ç¤ºï¼Œçˆ¶å…ƒç´ çš„å®½åº¦ä¸ºæ‰€æœ‰å­å…ƒç´ å®½åº¦ä¹‹å’Œ
+         // è·å–DOMå…ƒç´ 
          var nav_tabs = $('.wjs_product .nav-tabs');
          var lis = nav_tabs.find('li');
-         //ÉèÖÃ¸¸ÔªËØ¿í¶È
+         //è®¾ç½®çˆ¶å…ƒç´ å®½åº¦
          var width = 0;
-         //±éÀúli
+         //éå†li
          $.each(lis, function(i, v){
-            //width: ÄÚÈİ¿í¶È
-            //innerWidth: ÄÚÈİ¿í¶È + padding
-            //outerWidth: ÄÚÈİ¿í¶È + padding + ±ß¿ò
-            //outerWidth(true): ÄÚÈİ¿í¶È + padding + ±ß¿ò + margin
+            //width: å†…å®¹å®½åº¦
+            //innerWidth: å†…å®¹å®½åº¦ + padding
+            //outerWidth: å†…å®¹å®½åº¦ + padding + è¾¹æ¡†
+            //outerWidth(true): å†…å®¹å®½åº¦ + padding + è¾¹æ¡† + margin
             width += $(v).outerWidth(true);
          });
          nav_tabs.width(width);
 
-    //2. ¸¸ºĞ×ÓÍâ»¹ĞèºĞ×Ó°üÈİ
-    //   HTMLÖĞÌí¼Ó
+    //2. çˆ¶ç›’å­å¤–è¿˜éœ€ç›’å­åŒ…å®¹
+    //   HTMLä¸­æ·»åŠ 
 
-    //3. ÊµÏÖ×óÓÒ»¬¶¯£¬Ê¹ÓÃiscroll²å¼ş
+    //3. å®ç°å·¦å³æ»‘åŠ¨ï¼Œä½¿ç”¨iscrollæ’ä»¶
          var myScroll = new IScroll('.tabBox',{
              //mouseWheel: true,
              //scrollbars: true
@@ -159,7 +163,7 @@ var initProduct = function(){
          });
 };
 
-//³õÊ¼»¯bootstrap Static tooltipÉÏÏÂÌáÊ¾¿ò
+//åˆå§‹åŒ–bootstrap Static tooltipä¸Šä¸‹æç¤ºæ¡†
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 });
