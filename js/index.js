@@ -1,6 +1,8 @@
 /**
  * Created by lenovo on 2018/9/4.
  */
+console.log("sublime冲突验证");
+
 $(function(){
     //改变轮播定时器速度
     //$('.carousel').carousel({
